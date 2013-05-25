@@ -38,6 +38,10 @@
       
           <ul class="nav">
               <li><a href="#">Downtown <span class="icon-left-open"></span></a></li>
+
+      <div id="neigborhoodList" class="">
+          <ul>
+              <li><a href="#">Downtown</a></li>
               <li><a href="#">Uptown</a></li>
               <li><a href="#">Downtown</a></li>
               <li><a href="#">Downtown</a></li>
@@ -76,11 +80,20 @@
 			   fillOpacity: 0.7
 		   }
 	   }  
+
+	   function makeList(data) {
+		   $('#neigborhoodList').html('');
+		   $(data.features).each(function(index, ele) {
+			   $('#neigborhoodList').append('<li><a href="#">'+ele.properties.BDNAME+'</a></li>');
+		   });
+	   }
 	   
              $.get("data/minneapolis.json", function(data) {
                 //When GeoJSON is loaded
 		var geojsonLayer = new L.GeoJSON(data, {style: style});   //New GeoJSON layer
-                map.addLayer(geojsonLayer);     //Add layer to map  
+		map.addLayer(geojsonLayer);     //Add layer to map  
+
+		makeList(data);
 
               });
            });
