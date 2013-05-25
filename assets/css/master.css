@@ -1605,95 +1605,175 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 ---------------------------------------------------------------------- */
 /* Retiny Mixin
 ---------------------------------------------------------------------- */
-/**
- * Style Sheet for Animations
- *
- * This stylesheet is comprised of font-face and typography being used throughout the site.
- * Please be aware to insert all or any type related declarations to the content of the
- * site in this stylesheet. 
- *
- * @tag This is a tag named 'tag'
- *
- * @todo This is a todo statement that describes an atomic task to be completed
- *   at a later date. It wraps after 80 characters and following lines are
- *   indented by 2 spaces.
- */
-/* --------------------------------------------------------------------------------------------------------------
-	&= Animation 
---------------------------------------------------------------------------------------------------------------- */
-.portrait {
-  -webkit-transform: translateY(-100px);
-  -moz-transform: translateY(-100px);
-  transform: translateY(-100px);
-  -webkit-animation: fadein 0.3s 0.5s 1 forwards ease-in-out;
-  -moz-animation: fadein 0.3s 0.5s 1 forwards ease-in-out;
-  animation: fadein 0.3s 0.5s 1 forwards ease-in-out;
-  opacity: 0; }
+/* The Grid ---------------------- */
+.row {
+  max-width: 60.625em;
+  margin: 0 auto; }
 
-.home .navigation-desktop ul {
-  -webkit-transform: translateY(-20px);
-  -moz-transform: translateY(-20px);
-  transform: translateY(-20px);
-  -webkit-animation: fadein 0.8s 0.5s 1 forwards ease-in-out;
-  -moz-animation: fadein 0.8s 0.5s 1 forwards ease-in-out;
-  animation: fadein 0.8s 0.5s 1 forwards ease-in-out;
-  opacity: 0; }
+.row .row {
+  width: auto;
+  max-width: none;
+  min-width: 0;
+  margin: 0 -15px; }
 
-.navigation-desktop ul {
-  -webkit-transform: translateY(-20px);
-  -moz-transform: translateY(-20px);
-  transform: translateY(-20px);
-  -webkit-animation: fadein 0.2s 0.6s 1 forwards ease-in-out;
-  -moz-animation: fadein 0.2s 0.6s 1 forwards ease-in-out;
-  animation: fadein 0.2s 0.6s 1 forwards ease-in-out;
-  opacity: 0; }
+.row.collapse .column, .row.collapse .columns {
+  padding: 0; }
 
-.title-desktop, body.home .title-mobile {
-  -webkit-transform: translateY(-60px);
-  -moz-transform: translateY(-60px);
-  transform: translateY(-60px);
-  -webkit-animation: fadein 1.2s 0.5s 1 forwards ease-in-out;
-  -moz-animation: fadein 1.2s 0.5s 1 forwards ease-in-out;
-  animation: fadein 1.2s 0.5s 1 forwards ease-in-out;
-  opacity: 0; }
+.row .row {
+  width: auto;
+  max-width: none;
+  min-width: 0;
+  margin: 0 -15px; }
 
-.portfolio {
-  -webkit-transform: translateY(-60px);
-  -moz-transform: translateY(-60px);
-  transform: translateY(-60px);
-  -webkit-animation: fadein 1.6s 0.8s 1 forwards ease-in-out;
-  -moz-animation: fadein 1.6s 0.8s 1 forwards ease-in-out;
-  animation: fadein 1.6s 0.8s 1 forwards ease-in-out;
-  opacity: 0; }
+.row .row.collapse {
+  margin: 0; }
 
-@-webkit-keyframes fadein {
-  0% {
-    -webkit-transform: translateY(-80px);
-    opacity: 0; }
+/* Nicolas Gallagher's micro clearfix */
+.row {
+  *zoom: 1; }
 
-  100% {
-    -webkit-transform: translateY(0);
-    opacity: 1; } }
+.row:before, .row:after {
+  content: " ";
+  display: table; }
 
-@-moz-keyframes fadein {
-  0% {
-    -moz-transform: translateY(-20px);
-    opacity: 0; }
+.row:after {
+  clear: both; }
 
-  100% {
-    -moz-transform: translateY(0);
-    opacity: 1; } }
+.column, .columns {
+  float: left;
+  min-height: 1px;
+  padding: 0 1em;
+  position: relative; }
 
-/* Styles for IE9 */
-.ie .portrait,
-.ie .home .navigation-desktop,
-.ie .navigation-desktop,
-.ie .title-desktop,
-.ie body.home .title-mobile,
-.ie .title-desktop,
-.ie body.home .title-mobile,
-.ie .portfolio {
-  opacity: 1; }
+.column.centered, .columns.centered {
+  float: none;
+  margin: 0 auto; }
+
+[class*="column"] + [class*="column"]:last-child {
+  float: right; }
+
+[class*="column"] + [class*="column"].end {
+  float: left; }
+
+.one, .row .one {
+  width: 8.33333%; }
+
+.two, .row .two {
+  width: 16.66667%; }
+
+.three, .row .three {
+  width: 25%; }
+
+.four, .row .four {
+  width: 33.33333%; }
+
+.five, .row .five {
+  width: 41.66667%; }
+
+.six, .row .six {
+  width: 50%; }
+
+.seven, .row .seven {
+  width: 58.33333%; }
+
+.eight, .row .eight {
+  width: 66.66667%; }
+
+.nine, .row .nine {
+  width: 75%; }
+
+.ten, .row .ten {
+  width: 83.33333%; }
+
+.eleven, .row .eleven {
+  width: 91.66667%; }
+
+.twelve, .row .twelve {
+  width: 100%; }
+
+.row .offset-by-one {
+  margin-left: 8.33333%; }
+
+.row .offset-by-two {
+  margin-left: 16.66667%; }
+
+.row .offset-by-three {
+  margin-left: 25%; }
+
+.row .offset-by-four {
+  margin-left: 33.33333%; }
+
+.row .offset-by-five {
+  margin-left: 41.66667%; }
+
+.row .offset-by-six {
+  margin-left: 50%; }
+
+.row .offset-by-seven {
+  margin-left: 58.33333%; }
+
+.row .offset-by-eight {
+  margin-left: 66.66667%; }
+
+.row .offset-by-nine {
+  margin-left: 75%; }
+
+.row .offset-by-ten {
+  margin-left: 83.33333%; }
+
+.push-two {
+  left: 16.66667%; }
+
+.pull-two {
+  right: 16.66667%; }
+
+.push-three {
+  left: 25%; }
+
+.pull-three {
+  right: 25%; }
+
+.push-four {
+  left: 33.33333%; }
+
+.pull-four {
+  right: 33.33333%; }
+
+.push-five {
+  left: 41.66667%; }
+
+.pull-five {
+  right: 41.66667%; }
+
+.push-six {
+  left: 50%; }
+
+.pull-six {
+  right: 50%; }
+
+.push-seven {
+  left: 58.33333%; }
+
+.pull-seven {
+  right: 58.33333%; }
+
+.push-eight {
+  left: 66.66667%; }
+
+.pull-eight {
+  right: 66.66667%; }
+
+.push-nine {
+  left: 75%; }
+
+.pull-nine {
+  right: 75%; }
+
+.push-ten {
+  left: 83.33333%; }
+
+.pull-ten {
+  right: 83.33333%; }
 
 /* ==========================================================================
    Style in General
@@ -1816,1045 +1896,55 @@ body {
   padding: 1em 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 
-.logo {
+header .logo {
   width: 157px;
   margin: 0 auto;
   display: block; }
+header h3 {
+  text-align: center;
+  color: #7babbd;
+  font-size: 1.875em;
+  text-shadow: rgba(255, 255, 255, 0.5) 0 1px 0; }
 
 .main-content {
   background-color: #fff; }
   .main-content #map {
-    width: 100%!important; }
-
-/**
- * Master Stylesheet
- *
- * The first sentence of the long description starts here and continues on this
- * line for a while finally concluding here at the end of this paragraph.
- *
- * The long description is ideal for more detailed explanations and
- * documentation. It can include example HTML, URLs, or any other information
- * that is deemed necessary or useful.
- *
- * @tag This is a tag named 'tag'
- *
- * @todo This is a todo statement that describes an atomic task to be completed
- *   at a later date. It wraps after 80 characters and following lines are
- *   indented by 2 spaces.
- */
-@media screen and (max-width: 600px) {
-  .row > div {
-    padding: 0 1em; }
-
-  /* ==========================================================================
-     Home Page
-     ========================================================================== */
-  .portrait, .portrait-resize {
-    display: none; }
-
-  .title-desktop {
-    display: none; }
-
-  .navigation-desktop {
-    display: none; }
-
-  header[role="main-header"] {
-    margin: 0 0;
-    background-color: #ccb9a2;
-    padding: 0 0 3em 0; }
-    header[role="main-header"] h1 {
-      font-family: normal "schoolbook-web", Cambria, Georgia, "Century schoolbook 1", times, serif;
-      font-size: 1.25em;
-      font-weight: normal;
-      color: #454545;
-      /* 		letter-spacing: -1px; */
-      text-align: center;
-      margin: 0.75em 0 0 0;
-      padding: 0 1em; }
-    header[role="main-header"] .section-title {
-      font-size: 1.125em;
-      font-weight: normal;
-      text-align: center;
-      margin: 0px 0 0 0;
-      border: none;
-      text-transform: none;
-      letter-spacing: 0;
-      padding: 0; }
-      header[role="main-header"] .section-title span {
-        background-color: #867565;
-        color: #fff;
-        display: inline-block;
-        padding: 0.5em 1em;
-        /*
-        			position: absolute;
-        			top: -46px;
-        			left: 120px;
-        */
-        z-index: 9999; }
-
-  body.about-page header[role="main-header"], body.notebook header[role="main-header"], body.work-page header[role="main-header"], body.work-project-page header[role="main-header"], body.contact-page header[role="main-header"] {
-    padding: 0 0 0; }
-    body.about-page header[role="main-header"] .section-title, body.notebook header[role="main-header"] .section-title, body.work-page header[role="main-header"] .section-title, body.work-project-page header[role="main-header"] .section-title, body.contact-page header[role="main-header"] .section-title {
-      font-size: 1.125em;
-      font-weight: bold;
-      text-align: center;
-      margin: 10px 0 0 0;
-      border: none;
-      text-transform: none;
-      letter-spacing: 0;
-      padding: 0;
-      text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.5); }
-      body.about-page header[role="main-header"] .section-title span, body.notebook header[role="main-header"] .section-title span, body.work-page header[role="main-header"] .section-title span, body.work-project-page header[role="main-header"] .section-title span, body.contact-page header[role="main-header"] .section-title span {
-        background-color: #867565;
-        color: #fff;
-        display: inline-block;
-        padding: 0.5em 1em;
-        z-index: 9999; }
-
-  nav[role="navigation-mobile"] {
-    border-top: 4px solid #c3ae94;
-    margin: 0;
-    height: 64px;
-    background-color: #756558; }
-    nav[role="navigation-mobile"] > img {
-      display: block; }
-    nav[role="navigation-mobile"] .logo {
-      float: left;
-      margin: 0.25em 0 0 0.25em; }
-      nav[role="navigation-mobile"] .logo a:link {
-        display: block;
-        width: 70px;
-        height: 50px;
-        background: url(../images/logo-juju.png) no-repeat;
-        background-size: 70px 50px; }
-    nav[role="navigation-mobile"] .menu {
-      border: 3px solid #675d54;
-      margin: .5em;
-      width: 3.5em;
-      height: 2.688em;
-      display: block;
-      background-color: #998678;
-      float: right; }
-      nav[role="navigation-mobile"] .menu .bar {
-        width: 70%;
-        height: 4px;
-        background-color: #fff;
-        -moz-border-radius: 5px;
-        -webkit-border-radius: 5px;
-        border-radius: 5px;
-        margin: 0 auto; }
-      nav[role="navigation-mobile"] .menu .bar1 {
-        margin-top: 7px; }
-      nav[role="navigation-mobile"] .menu .bar2 {
-        margin-top: 5px; }
-      nav[role="navigation-mobile"] .menu .bar3 {
-        margin-top: 5px; }
-
-  .about-me {
-    padding-top: 1em;
-    padding-bottom: 1em;
-    clear: both;
-    width: 100%; }
-
-  .no-svg nav[role="navigation-mobile"] .logo a:link {
-    display: block;
-    width: 70px;
-    height: 50px;
-    background: url(../images/logo-juju.png) no-repeat; }
-
-  .portfolio {
-    margin: 0 0 1em 0; }
-
-  .page-title {
-    display: none; }
-
-  .page-title + p {
-    padding: 1em 0 0 0;
-    text-align: left; }
-
-  .latest-journal h3 {
-    margin-bottom: 0!important; }
-  .latest-journal article {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-    padding: 1em 0 2em 0;
-    margin: 0; }
-
-  .random-stats ul {
-    margin: 0; }
-    .random-stats ul li {
-      list-style: none;
-      border-bottom: 1px solid #d9d9d9;
-      width: 100%;
-      float: left;
-      padding: 1em 0; }
-
-  .blog-post .center, .blog-post .left, .blog-post .right {
-    margin-right: -16px;
-    margin-left: -16px;
-    background-color: rgba(0, 0, 0, 0.125);
+    width: 98%!important;
+    padding: 1em 0 0 0; }
+  .main-content h4.title {
+    font-size: 1.5em;
+    color: #7babbd;
     text-align: center;
-    padding: 0 0 0.25em 0;
-    float: none; }
-    .blog-post .center .caption, .blog-post .left .caption, .blog-post .right .caption {
-      text-align: center;
-      font-family: "proxima-nova", "Helvetica Neue", Helvetica, arial, freesans, "liberation sans", sans-serif;
-      font-size: 0.875em; }
-  .blog-post .button {
-    list-style: none;
-    display: inline-block;
-    padding: 0.5em 0.25em;
-    background-color: rgba(0, 0, 0, 0.125);
-    font-size: 1.625em;
-    position: static;
-    width: 45%;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px; }
-  .blog-post .next {
-    float: right; }
-    .blog-post .next span {
-      float: right; }
-
-  aside.buttons {
     margin: 1em 0; }
 
-  /* ==========================================================================
-     About Page
-     ========================================================================== */
-  .tools {
-    margin: 0 0 1em 1.5em;
-    padding: 0; }
-
-  /* ==========================================================================
-     Words Page
-     ========================================================================== */
-  /* ==========================================================================
-     Footer
-     ========================================================================== */
-  .footer .booklog-item {
-    clear: both; } }
-/* End max-600 */
-/**
- * Master Stylesheet
- *
- * The first sentence of the long description starts here and continues on this
- * line for a while finally concluding here at the end of this paragraph.
- *
- * The long description is ideal for more detailed explanations and
- * documentation. It can include example HTML, URLs, or any other information
- * that is deemed necessary or useful.
- *
- * @tag This is a tag named 'tag'
- *
- * @todo This is a todo statement that describes an atomic task to be completed
- *   at a later date. It wraps after 80 characters and following lines are
- *   indented by 2 spaces.
- */
-@media screen and (min-width: 600px) {
-  /* The Grid ---------------------- */
-  .row {
-    max-width: 60.625em;
-    margin: 0 auto; }
-
-  .row .row {
-    width: auto;
-    max-width: none;
-    min-width: 0;
-    margin: 0 -15px; }
-
-  .row.collapse .column, .row.collapse .columns {
-    padding: 0; }
-
-  .row .row {
-    width: auto;
-    max-width: none;
-    min-width: 0;
-    margin: 0 -15px; }
-
-  .row .row.collapse {
-    margin: 0; }
-
-  /* Nicolas Gallagher's micro clearfix */
-  .row {
-    *zoom: 1; }
-
-  .row:before, .row:after {
-    content: " ";
-    display: table; }
-
-  .row:after {
-    clear: both; }
-
-  .column, .columns {
-    float: left;
-    min-height: 1px;
-    padding: 0 1em;
-    position: relative; }
-
-  .column.centered, .columns.centered {
-    float: none;
-    margin: 0 auto; }
-
-  [class*="column"] + [class*="column"]:last-child {
-    float: right; }
-
-  [class*="column"] + [class*="column"].end {
-    float: left; }
-
-  .one, .row .one {
-    width: 8.33333%; }
-
-  .two, .row .two {
-    width: 16.66667%; }
-
-  .three, .row .three {
-    width: 25%; }
-
-  .four, .row .four {
-    width: 33.33333%; }
-
-  .five, .row .five {
-    width: 41.66667%; }
-
-  .six, .row .six {
-    width: 50%; }
-
-  .seven, .row .seven {
-    width: 58.33333%; }
-
-  .eight, .row .eight {
-    width: 66.66667%; }
-
-  .nine, .row .nine {
-    width: 75%; }
-
-  .ten, .row .ten {
-    width: 83.33333%; }
-
-  .eleven, .row .eleven {
-    width: 91.66667%; }
-
-  .twelve, .row .twelve {
-    width: 100%; }
-
-  .row .offset-by-one {
-    margin-left: 8.33333%; }
-
-  .row .offset-by-two {
-    margin-left: 16.66667%; }
-
-  .row .offset-by-three {
-    margin-left: 25%; }
-
-  .row .offset-by-four {
-    margin-left: 33.33333%; }
-
-  .row .offset-by-five {
-    margin-left: 41.66667%; }
-
-  .row .offset-by-six {
-    margin-left: 50%; }
-
-  .row .offset-by-seven {
-    margin-left: 58.33333%; }
-
-  .row .offset-by-eight {
-    margin-left: 66.66667%; }
-
-  .row .offset-by-nine {
-    margin-left: 75%; }
-
-  .row .offset-by-ten {
-    margin-left: 83.33333%; }
-
-  .push-two {
-    left: 16.66667%; }
-
-  .pull-two {
-    right: 16.66667%; }
-
-  .push-three {
-    left: 25%; }
-
-  .pull-three {
-    right: 25%; }
-
-  .push-four {
-    left: 33.33333%; }
-
-  .pull-four {
-    right: 33.33333%; }
-
-  .push-five {
-    left: 41.66667%; }
-
-  .pull-five {
-    right: 41.66667%; }
-
-  .push-six {
-    left: 50%; }
-
-  .pull-six {
-    right: 50%; }
-
-  .push-seven {
-    left: 58.33333%; }
-
-  .pull-seven {
-    right: 58.33333%; }
-
-  .push-eight {
-    left: 66.66667%; }
-
-  .pull-eight {
-    right: 66.66667%; }
-
-  .push-nine {
-    left: 75%; }
-
-  .pull-nine {
-    right: 75%; }
-
-  .push-ten {
-    left: 83.33333%; }
-
-  .pull-ten {
-    right: 83.33333%; }
-
-  /* ==========================================================================
-     Home Page
-     ========================================================================== */
-  .title-mobile {
-    display: none; }
-
-  nav[role="navigation-mobile"] {
-    display: none; }
-
-  header[role="main-header"] {
-    background: url(../images/header-bg.jpg) top left repeat-x;
-    min-height: 390px; }
-
-  body.notebook header, body.about-page header, body.work-page header, body.work-project-page header, body.contact-page header {
-    min-height: 0; }
-
-  .header {
-    position: relative;
-    padding: 0;
-    height: 118px; }
-
-  .portrait {
-    position: absolute;
-    top: 25px;
-    left: 50%;
-    margin-left: -59px;
-    display: block; }
-
-  .portrait-resize {
-    width: 80px;
-    float: left;
-    margin: 15px 0 0 1em; }
-
-  .ie .navigation-desktop .menu li {
-    font-family: helvetica; }
-
-  .navigation-desktop {
-    padding: 40px 0 0 0; }
-    .navigation-desktop .menu {
-      padding: 0 0 0 1em;
-      width: auto;
-      margin: 0.25em 0 0 0;
-      float: left; }
-      .navigation-desktop .menu li {
-        list-style: none;
-        margin: 0 0.15em;
-        font-family: "proxima-nova", "Helvetica Neue", Helvetica, arial, freesans, "liberation sans", sans-serif;
-        font-size: 1.125em;
-        text-transform: uppercase;
-        font-weight: bold;
-        padding: 0.5em 0.5em;
-        float: left;
-        font-style: normal!important; }
-        .navigation-desktop .menu li a:link, .navigation-desktop .menu li a:visited {
-          color: #fff;
-          text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.5);
-          text-decoration: none;
-          font-style: normal!important; }
-      .navigation-desktop .menu li.active {
-        background-color: rgba(0, 0, 0, 0.5);
-        -moz-border-radius: 5px;
-        -webkit-border-radius: 5px;
-        border-radius: 5px;
-        box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.25), 0px -1px 0px rgba(0, 0, 0, 0.45);
-        background: #5c4e43;
-        /* Old browsers */
-        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzVjNGU0MyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3NTY4NWYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-        background: -moz-linear-gradient(top, #5c4e43 0%, #75685f 100%);
-        /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5c4e43), color-stop(100%, #75685f));
-        /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top, #5c4e43 0%, #75685f 100%);
-        /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top, #5c4e43 0%, #75685f 100%);
-        /* Opera 11.10+ */
-        background: -ms-linear-gradient(top, #5c4e43 0%, #75685f 100%);
-        /* IE10+ */
-        background: linear-gradient(to bottom, #5c4e43 0%, #75685f 100%);
-        /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5c4e43', endColorstr='#75685f',GradientType=0 );
-        /* IE6-8 */ }
-        .no-rgba .navigation-desktop .menu li.active {
-          border: 1px solid #6a5f56; }
-    .navigation-desktop ul.social {
-      position: absolute;
-      right: 1%;
-      top: 40px;
-      width: 32%; }
-      .navigation-desktop ul.social li {
-        list-style: none;
-        margin: 0 0.2em;
-        font-family: "schoolbook-web", Cambria, Georgia, "Century schoolbook 1", times, serif;
-        font-size: 1em;
-        font-weight: bold;
-        padding: .5em;
-        text-align: center;
-        float: right;
-        line-height: 20px;
-        border: 1px solid #999999;
-        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.5);
-        -moz-border-radius: 5px;
-        -webkit-border-radius: 5px;
-        border-radius: 5px;
-        moz-box-shadow: 3px 3px 4px black;
-        -webkit-box-shadow: 3px 3px 4px black;
-        box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25), 0px 1px 0px rgba(255, 255, 255, 0.15); }
-        .navigation-desktop ul.social li a:link, .navigation-desktop ul.social li a:visited {
-          color: #fff; }
-      .navigation-desktop ul.social li.twitter {
-        border: 1px solid #005f83;
-        background: #49ceff;
-        /* Old browsers */
-        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ5Y2VmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDhmYzQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-        background: -moz-linear-gradient(top, #49ceff 0%, #008fc4 100%);
-        /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #49ceff), color-stop(100%, #008fc4));
-        /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top, #49ceff 0%, #008fc4 100%);
-        /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top, #49ceff 0%, #008fc4 100%);
-        /* Opera 11.10+ */
-        background: -ms-linear-gradient(top, #49ceff 0%, #008fc4 100%);
-        /* IE10+ */
-        background: linear-gradient(to bottom, #49ceff 0%, #008fc4 100%);
-        /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#49ceff', endColorstr='#008fc4',GradientType=0 );
-        /* IE6-8 */ }
-        .navigation-desktop ul.social li.twitter span.text {
-          display: none; }
-      .navigation-desktop ul.social li.dribbble {
-        border: 1px solid #962551;
-        background: #ea4c89;
-        /* Old browsers */
-        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VhNGM4OSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjOTMyNmMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-        background: -moz-linear-gradient(top, #ea4c89 0%, #c9326c 100%);
-        /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ea4c89), color-stop(100%, #c9326c));
-        /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top, #ea4c89 0%, #c9326c 100%);
-        /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top, #ea4c89 0%, #c9326c 100%);
-        /* Opera 11.10+ */
-        background: -ms-linear-gradient(top, #ea4c89 0%, #c9326c 100%);
-        /* IE10+ */
-        background: linear-gradient(to bottom, #ea4c89 0%, #c9326c 100%);
-        /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ea4c89', endColorstr='#c9326c',GradientType=0 );
-        /* IE6-8 */ }
-      .navigation-desktop ul.social li.linkedin {
-        border: 1px solid #015a7c;
-        background: #0181b2;
-        /* Old browsers */
-        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAxODFiMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDYxODQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-        background: -moz-linear-gradient(top, #0181b2 0%, #006184 100%);
-        /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0181b2), color-stop(100%, #006184));
-        /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top, #0181b2 0%, #006184 100%);
-        /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top, #0181b2 0%, #006184 100%);
-        /* Opera 11.10+ */
-        background: -ms-linear-gradient(top, #0181b2 0%, #006184 100%);
-        /* IE10+ */
-        background: linear-gradient(to bottom, #0181b2 0%, #006184 100%);
-        /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0181b2', endColorstr='#006184',GradientType=0 );
-        /* IE6-8 */ }
-
-  body.home .navigation-desktop {
-    padding: 70px 0 0 0;
-    float: left;
-    width: 100%; }
-    body.home .navigation-desktop ul {
-      list-style: none;
-      width: 50%; }
-      body.home .navigation-desktop ul li {
-        list-style: none;
-        margin: 0;
-        font-family: "proxima-nova", "Helvetica Neue", Helvetica, arial, freesans, "liberation sans", sans-serif;
-        font-size: 1.25em;
-        text-transform: uppercase;
-        font-weight: bold;
-        padding: 0.5em 0.75em; }
-        body.home .navigation-desktop ul li a:link, body.home .navigation-desktop ul li a:visited {
-          color: #fff;
-          text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.5);
-          text-decoration: none; }
-    body.home .navigation-desktop .l-menu {
-      padding: 0 4.5em 0 0;
-      float: left; }
-      body.home .navigation-desktop .l-menu li {
-        text-align: center;
-        /* 			float: left; */ }
-    body.home .navigation-desktop .r-menu {
-      padding: 0 0 0 4.5em;
-      float: right; }
-      body.home .navigation-desktop .r-menu li {
-        text-align: center;
-        /* 			float: right; */ }
-
-  .ie body.home .navigation-desktop li {
-    font-family: helvetica; }
-
-  body.about-page header[role="main-header"] .section-title, body.notebook header[role="main-header"] .section-title, body.work-page header[role="main-header"] .section-title, body.work-project-page header[role="main-header"] .section-title, body.contact-page header[role="main-header"] .section-title {
-    display: none; }
-
-  .portfolio {
-    margin-top: -76px;
-    background-color: #fff;
-    padding: 1.195744%;
-    moz-box-shadow: 3px 3px 4px black;
-    -webkit-box-shadow: 3px 3px 4px black;
-    box-shadow: 0px 0px 0.125em rgba(0, 0, 0, 0.25); }
-    .portfolio .section-title {
-      display: none; }
-
-  body.home .about-me img {
-    display: none; }
-
-  .latest-journal article {
-    width: 50%;
-    float: left;
-    padding: 0 0.75em 0 0;
-    min-height: 250px;
-    margin: 0 0 1em 0; }
-    .latest-journal article h2 {
-      margin: 0;
-      font-family: normal "schoolbook-web", Cambria, Georgia, "Century schoolbook 1", times, serif; }
-    .latest-journal article .entry-date {
-      font-size: 0.875em;
-      font-weight: normal;
-      color: #696969;
-      margin: 0;
-      padding: 0.25em 0 1em 0; }
-
-  .random-stats ul {
-    margin: 0; }
-    .random-stats ul li {
-      list-style: none;
-      border-bottom: 1px solid #d9d9d9;
-      width: 50%;
-      float: left; }
-
-  footer .about-me {
-    float: left; }
-    footer .about-me img {
-      width: auto; }
-  footer .social-networks {
-    width: 100%;
-    float: left;
-    border: none; }
-  footer .booklog-item {
-    padding-bottom: .25em;
-    border: none; }
-    footer .booklog-item img {
-      float: left; }
-    footer .booklog-item h4 {
-      margin-bottom: .25em; }
-  footer nav[role="menu"] {
-    display: none;
-    border: 1px solid red; }
-    footer nav[role="menu"] ul {
-      list-style: none; }
-    footer nav[role="menu"] .back-top {
-      display: none; }
-
-  .blog-post article h1, .blog-post article h2, .blog-post article h3, .blog-post article h4, .blog-post article h5, .blog-post article h6, .blog-post article p, .blog-post article div, .blog-post article header, .blog-post article header h2, .blog-post article ul, .blog-post article blockquote, .blog-post article pre {
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto; }
-
-  .blog-post .center {
-    margin-top: 2em;
-    margin-bottom: 2em; }
-    .blog-post .center .caption {
-      margin: 0.25em 0 0 0;
-      font-family: "proxima-nova", "Helvetica Neue", Helvetica, arial, freesans, "liberation sans", sans-serif;
-      text-align: center;
-      max-width: none; }
-  .blog-post .left {
-    width: 50%;
-    margin: 1em 2em 0 0;
-    float: left; }
-    .blog-post .left .caption {
-      font-size: 0.875em;
-      text-align: center; }
-  .blog-post .right {
-    width: 50%;
-    margin: 1em 0 0 2em;
-    float: right; }
-    .blog-post .right .caption {
-      font-size: 0.875em;
-      text-align: center; }
-
-  /* ==========================================================================
-     About Page
-     ========================================================================== */
-  .section-title {
-    margin-left: .65em; }
-
-  .tools li {
-    float: left;
-    width: 25%; }
-
-  /* ==========================================================================
-     Work Page
-     ========================================================================== */
-  .project-intro p {
-    text-align: center;
-    padding: 0 2em; }
-  .project-intro .visit-btn {
-    text-align: center;
-    margin: 0 auto;
-    background-color: #7d8a9e;
-    width: 120px; }
-    .project-intro .visit-btn a:link {
-      color: #fff; }
-    .project-intro .visit-btn a:visited {
-      color: #727272; }
-
-  .project .testimonial {
-    width: 70%;
-    margin: 1em auto; }
-    .project .testimonial p {
-      font-size: 2.125em;
-      line-height: 1em; } }
-/* End screen min-width:600px */
-/**
- * Master Stylesheet
- *
- * The first sentence of the long description starts here and continues on this
- * line for a while finally concluding here at the end of this paragraph.
- *
- * The long description is ideal for more detailed explanations and
- * documentation. It can include example HTML, URLs, or any other information
- * that is deemed necessary or useful.
- *
- * @tag This is a tag named 'tag'
- *
- * @todo This is a todo statement that describes an atomic task to be completed
- *   at a later date. It wraps after 80 characters and following lines are
- *   indented by 2 spaces.
- */
-@media screen and (max-width: 768px) {
-  /* ==========================================================================
-     Home Page
-     ========================================================================== */
-  nav[role="menu"] {
-    margin: 1em 0 0 0; }
-    nav[role="menu"] ul {
-      list-style: none;
-      margin: 0 0em; }
-      nav[role="menu"] ul li {
-        font-family: "proxima-nova", "Helvetica Neue", Helvetica, arial, freesans, "liberation sans", sans-serif;
-        margin: 0 -15px;
-        padding: 1em 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-        background-color: #2e5064;
-        font-size: 1.25em;
-        font-weight: bold;
-        text-transform: uppercase;
-        text-align: center;
-        list-style: none; }
-        nav[role="menu"] ul li:first-child {
-          border-top: 6px solid #365e75; }
-        nav[role="menu"] ul li:last-child {
-          border-bottom: 6px solid #365e75; }
-        nav[role="menu"] ul li a:link {
-          color: #fff;
-          text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
-          display: block;
-          text-decoration: none; }
-        nav[role="menu"] ul li a:visited {
-          color: #fff; }
-
-  /* ==========================================================================
-     Work Page
-     ========================================================================== */
-  /* ==========================================================================
-     About Page
-     ========================================================================== */
-  .row .four {
-    width: 100%;
-    float: none!important; }
-
-  /* ==========================================================================
-     Words Page
-     ========================================================================== */
-  /* ==========================================================================
-     Contact Page
-     ========================================================================== */ }
-/* End max-width: 768px */
-/**
- * Master Stylesheet
- *
- * The first sentence of the long description starts here and continues on this
- * line for a while finally concluding here at the end of this paragraph.
- *
- * The long description is ideal for more detailed explanations and
- * documentation. It can include example HTML, URLs, or any other information
- * that is deemed necessary or useful.
- *
- * @tag This is a tag named 'tag'
- *
- * @todo This is a todo statement that describes an atomic task to be completed
- *   at a later date. It wraps after 80 characters and following lines are
- *   indented by 2 spaces.
- */
-@media screen and (min-width: 768px) {
-  /* ==========================================================================
-     Home Page
-     ========================================================================== */
-  .navigation-desktop {
-    padding: 40px 0 0 0; }
-    .navigation-desktop .menu {
-      margin: 0 0 0 0; }
-      .navigation-desktop .menu li {
-        font-style: normal;
-        font-size: 1.25em; }
-
-  body.home .navigation-desktop ul {
-    width: 50%; }
-    body.home .navigation-desktop ul li {
-      margin: 0 1em;
-      font-style: normal; }
-  body.home .navigation-desktop .l-menu {
-    padding: 0 4em 0 0; }
-    body.home .navigation-desktop .l-menu li {
-      float: right; }
-  body.home .navigation-desktop .r-menu {
-    padding: 0 0 0 4em; }
-    body.home .navigation-desktop .r-menu li {
-      float: left; }
-
-  .portfolio-wall {
-    display: block; }
-    .portfolio-wall .slides {
-      list-style: none; }
-      .portfolio-wall .slides li {
-        float: left;
-        overflow: hidden;
-        position: relative;
-        /* border: 1px solid rgba(0,0,0,.15); */ }
-        .portfolio-wall .slides li img {
-          max-width: none;
-          /* IE 8 */
-          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
-          /* IE 5-7 */
-          filter: alpha(opactiy=75);
-          /* Netscape */
-          -moz-opacity: 0.75;
-          /* Safari 1.x */
-          -khtml-opacity: 0.75;
-          /* Good browsers */
-          opacity: 0.75; }
-        .portfolio-wall .slides li .work-info {
-          /* IE 8 */
-          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-          /* IE 5-7 */
-          filter: alpha(opactiy=0);
-          /* Netscape */
-          -moz-opacity: 0;
-          /* Safari 1.x */
-          -khtml-opacity: 0;
-          /* Good browsers */
-          opacity: 0;
-          position: absolute;
-          width: 100%;
-          bottom: 0;
-          left: 0;
-          background-color: rgba(0, 0, 0, 0.85);
-          padding: 1em 1em 0.25em 1em;
-          border: 1px solid rgba(0, 0, 0, 0.5); }
-          .portfolio-wall .slides li .work-info h5 {
-            color: #fff;
-            font-size: 0.875em; }
-          .portfolio-wall .slides li .work-info p {
-            color: #fff;
-            text-shadow: none;
-            font-size: 0.75em; }
-      .portfolio-wall .slides li:hover .work-info {
-        -webkit-transition: opacity 0.2s ease-in-out;
-        -moz-transition: opacity 0.2s ease-in-out;
-        -o-transition: opacity 0.2s ease-in-out;
-        -webkit-transition: opacity 0.2s ease-in-out;
-        opacity: 1; }
-      .portfolio-wall .slides li:hover img {
-        -webkit-transition: opacity 0.2s ease-in-out;
-        -moz-transition: opacity 0.2s ease-in-out;
-        -o-transition: opacity 0.2s ease-in-out;
-        -webkit-transition: opacity 0.2s ease-in-out;
-        opacity: 1; }
-      .portfolio-wall .slides li.clone_1 {
-        width: 24.04255319%;
-        height: 321px;
-        margin-right: 2%; }
-      .portfolio-wall .slides li.clone_2 {
-        width: 47.83505%;
-        height: 321px;
-        margin-right: 2%; }
-      .portfolio-wall .slides li.clone_3 {
-        width: 24.04255319%;
-        height: 207px; }
-      .portfolio-wall .slides li.clone_4 {
-        width: 24.04255319%;
-        height: 207px;
-        margin-top: 2%;
-        float: right; }
-      .portfolio-wall .slides li.clone_5 {
-        width: 24.04255319%;
-        height: 321px;
-        margin-right: 2%;
-        margin-top: 2%;
-        float: left; }
-      .portfolio-wall .slides li.clone_6 {
-        width: 47.83505%;
-        height: 321px;
-        margin-right: 2%;
-        margin-top: 2%;
-        float: left; }
-      .portfolio-wall .slides li.clone_7 {
-        width: 24.04255319%;
-        height: 207px;
-        margin-top: 2%;
-        float: right; }
-
-  .no-opacity .slides .work-info {
-    display: none; }
-
-  .no-opacity .slides li:hover {
-    outline: 1px solid #b8b8b8; }
-
-  /* ==========================================================================
-     Work Page
-     ========================================================================== */
-  /* ==========================================================================
-     About Page
-     ========================================================================== */
-  body.about-page .about-juju figure {
-    margin-bottom: 1em;
-    border-bottom: 6px solid #569162; }
-
-  /* ==========================================================================
-     Words Page
-     ========================================================================== */
-  /* ==========================================================================
-     Contact Page
-     ========================================================================== */ }
-/* End min-width: 768px */
-/**
- * Master Stylesheet
- *
- * The first sentence of the long description starts here and continues on this
- * line for a while finally concluding here at the end of this paragraph.
- *
- * The long description is ideal for more detailed explanations and
- * documentation. It can include example HTML, URLs, or any other information
- * that is deemed necessary or useful.
- *
- * @tag This is a tag named 'tag'
- *
- * @todo This is a todo statement that describes an atomic task to be completed
- *   at a later date. It wraps after 80 characters and following lines are
- *   indented by 2 spaces.
- */
-@media screen and (min-width: 940px) {
-  /* ==========================================================================
-     Home Page
-     ========================================================================== */
-  .latest-journal, .random-stats {
-    padding: 0; }
-
-  .title-desktop {
-    font-size: 1.875em; }
-
-  .latest-journal article {
-    width: 25%;
-    float: left; }
-
-  nav[role="navigation-desktop"] ul.social {
-    right: 0;
-    top: 40px; }
-    nav[role="navigation-desktop"] ul.social li {
-      font-size: 1.25em; }
-    nav[role="navigation-desktop"] ul.social li.twitter {
-      font-size: 1em;
-      line-height: 24px; }
-      nav[role="navigation-desktop"] ul.social li.twitter span.text {
-        display: inline; }
-
-  .notebook .latest-journal article h2 {
-    font-size: 1.875em; }
-
-  .notebook .latest-journal article:first-child {
-    padding-top: 0!important; }
-
-  .home .random-stats .section-title {
-    margin-bottom: 0; }
-  .home .random-stats ul {
-    margin: 0; }
-    .home .random-stats ul li {
-      list-style: none;
-      border-bottom: 1px solid #d9d9d9;
-      width: 25%;
-      float: left; }
-
-  .blog-post .center {
-    margin: 0;
-    text-align: center; }
-    .blog-post .center div {
-      max-width: none; }
-      .blog-post .center div img {
-        /* border: 1px solid rgba(87,100,115,.5); */
-        padding: 12px;
-        background-color: #fff; }
-      .blog-post .center div .caption {
-        margin: 0.25em 0 0 0;
-        font-family: "proxima-nova", "Helvetica Neue", Helvetica, arial, freesans, "liberation sans", sans-serif;
-        font-size: 1em; }
-
-  /* ==========================================================================
-     Work Page
-     ========================================================================== */
-  /* ==========================================================================
-     About Page
-     ========================================================================== */
-  /* ==========================================================================
-     Words Page
-     ========================================================================== */
-  /* ==========================================================================
-     Contact Page
-     ========================================================================== */ }
-/* End min-width: 940px */
+ul.nav {
+  padding: 1em 0 0 0; }
+  ul.nav li {
+    line-height: 20px;
+    padding: 1em 0.5em;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-width: 1px 1px 0 1px;
+    background: #eeeeee;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #cccccc));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #eeeeee 0%, #cccccc 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 );
+    /* IE6-9 */ }
+    ul.nav li a:link, ul.nav li a:visited {
+      color: #4e6692;
+      text-decoration: none; }
+  ul.nav:last-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
+
+.right-col {
+  padding: 1em 0 0 0; }
