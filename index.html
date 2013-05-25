@@ -73,24 +73,65 @@
 		   }
 	   }  
 
+      function highlightFeature(e) {
+          var layer = e.target;
+
+          layer.setStyle({
+              weight: 5,
+              color: '#666',
+              dashArray: '',
+              fillOpacity: 0.7
+          });
+
+          if (!L.Browser.ie && !L.Browser.opera) {
+             layer.bringToFront();
+          }
+      }
+
 	   function makeList(data) {
 		   $('#neigborhoodList').html('');
 		   $(data.features).each(function(index, ele) {
 			   $('#neigborhoodList').append('<li><a href="#">'+ele.properties.BDNAME+'</a></li>');
 		   });
 	   }
+
+      function onEachFeature(feature, layer) {
+          layer.on({
+              mouseover: highlightFeature,
+              mouseout: resetHighlight,
+              click: zoomToFeature
+          });
+      }
+
+      function zoomToFeature(e) {
+          map.fitBounds(e.target.getBounds());
+      }
+
+      function resetHighlight(e) {
+          geojson.resetStyle(e.target);
+      }
+
+     function makeAttributeList(data) {
+       $(data).each(function(index, ele) {
+         //console.log(ele);
+       });
+     };
+   
+     $.get("data/neighborhoods.json", function(data) {
+       makeAttributeList(data);
+     });
 	   
-             $.get("data/minneapolis.json", function(data) {
-                //When GeoJSON is loaded
-		var geojsonLayer = new L.GeoJSON(data, {style: style});   //New GeoJSON layer
-		map.addLayer(geojsonLayer);     //Add layer to map  
-
-		makeList(data);
-
-              });
-           });
-
-        </script>
+     $.get("data/minneapolis.json", function(data) {
+      //When GeoJSON is loaded
+		  var geojsonLayer = new L.GeoJSON(data, {
+        style: style,
+        onEachFeature: onEachFeature,
+      });   //New GeoJSON layer
+		  map.addLayer(geojsonLayer);     //Add layer to map  
+		  makeList(data);
+     });
+    });
+    </script>
     </section>
     
     </div>  <!-- end main content --> 
