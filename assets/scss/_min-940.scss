@@ -1,0 +1,116 @@
+/**
+ * Master Stylesheet
+ *
+ * The first sentence of the long description starts here and continues on this
+ * line for a while finally concluding here at the end of this paragraph.
+ *
+ * The long description is ideal for more detailed explanations and
+ * documentation. It can include example HTML, URLs, or any other information
+ * that is deemed necessary or useful.
+ *
+ * @tag This is a tag named 'tag'
+ *
+ * @todo This is a todo statement that describes an atomic task to be completed
+ *   at a later date. It wraps after 80 characters and following lines are
+ *   indented by 2 spaces.
+ */
+ 
+   
+@media screen and (min-width: 940px) {
+
+/* ==========================================================================
+   Home Page
+   ========================================================================== */
+
+.latest-journal, .random-stats {
+	padding: 0;
+}   
+.title-desktop {
+		font-size: em(30);
+	}
+
+.latest-journal {
+	article {
+		width: 25%;
+		float: left;		
+	}
+}
+nav[role="navigation-desktop"] {
+	ul.social {
+		right: 0;
+		top: 40px;
+		li {
+			font-size: em(20);
+		}
+		li.twitter {
+			font-size: em(16);		
+			line-height: 24px;
+			span.text {
+				display: inline;
+			}
+		}
+	}
+}
+.notebook .latest-journal {
+	article {
+		h2 {
+			font-size: em(30);
+		}		
+	}
+}
+.notebook .latest-journal article:first-child {
+	padding-top: 0!important;
+}	
+
+.home .random-stats {
+	.section-title {
+		margin-bottom: 0;
+	}
+	ul {
+		margin: 0;
+		li {
+			list-style: none;
+			border-bottom: 1px solid #d9d9d9;
+			width: 25%;
+			float: left;
+		}
+	}
+}
+
+.blog-post {
+	.center {
+		margin: 0;
+		text-align: center;		
+		div {
+			max-width: none;
+			img {
+				/* border: 1px solid rgba(87,100,115,.5); */
+				padding: 12px;
+				background-color: #fff;
+			}
+			.caption {
+				margin: .25em 0 0 0;
+				font-family: $proxima;
+				font-size: em(16);
+			}		
+		}
+	}
+}
+
+/* ==========================================================================
+   Work Page
+   ========================================================================== */
+   
+/* ==========================================================================
+   About Page
+   ========================================================================== */   
+
+/* ==========================================================================
+   Words Page
+   ========================================================================== */
+   
+/* ==========================================================================
+   Contact Page
+   ========================================================================== */  	
+
+} /* End min-width: 940px */

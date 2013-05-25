@@ -1,0 +1,429 @@
+/*
+
+	Your Company Name
+	Designed Juliano Moreira { http://www.julianomoreira.com }
+	Version 1.0
+	
+	STYLESHEET FOR SUPER ANCIENT BROWSERS
+	
+	- Defines styles for browsers that don't support @import
+	- Only body & links need styling
+	- Markup should be nice so site should still be usable
+	
+*/
+
+/* General elements (Links, Lines, h1, h2, h3, h4, h5 etc)
+---------------------------------------------------------------------- */
+
+img, embed, object, video {max-width: 100%;}
+a:link {
+color: #626262;
+}
+a:visited {
+color: #424242;
+}
+a:hover {
+text-decoration: none;
+}
+.doubleLine {height: 9px; /* background: url(../images/double-line.png) repeat-x top left; */ margin: 2.5em 0; border-top: 4px double #999;}
+p {color: #5e5e5e; font-family: "PerpetuaRegular", serif; font-size: 1.4em; text-shadow: 0px 1px 0px rgba(255,255,255,.5);}
+h1, h2, h3, h4, h5, h6 {margin: 0 0 .5em; font-family: "TradeGothicLTStdBdCnNo.20"; color: #626262;}
+h1 {font-size: 2em;}
+h2 {font-size: 1.8em;}
+h3 {font-size: 1.6em;}
+h4 {font-size: 1.4em;}
+h5 {font-size: 1.2em;}
+h6 {font-size: 1em;}
+
+html, body {height: 100%;}
+.pushMe {clear: both; height: 50px;}
+
+.error {color: red; display: block;}
+
+/* -----------------------------------------------------------------
+	1.Layout Structure
+-----------------------------------------------------------------*/
+
+/* Grid structure */
+
+.grid1 .col {width: 100%;}
+.grid2 .col {width: 50%; float: left;}
+.grid3 .col {width: 33.298%/*323/970*/; float: left;}
+.grid4 .col {width: 24.948%/*242/970*/; float: left;}
+.grid5 .col {width: 20%/*194/970*/; float: left;}
+.col .inner {padding: 0 1em 0 0;}
+
+header {width: auto;}
+#container, nav > section, footer > section, #topNavInner {
+	max-width: 69.28em; /* 970 / 14 = 69.28 */
+	position: relative;
+	margin: 0 auto;	
+}
+#container {padding: 5em 0 2em 0; min-height: 100%; margin-bottom: -50px;}
+.dropDownNav {display: none;}
+
+/* 1.BODY
+---------------------------------------------------------------------- */
+
+body {
+	background: url(/assets/images/rusty-bg.jpg) repeat top left; 
+	font-family: "NobileRegular", "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 87.5%; /* 87.5% = 14px | 100% equals roughly 16px so do the math */
+	line-height: 1.8em;
+}
+
+/* !TopNav and Navigation ---------- */
+
+#topNav {
+background: rgb(245,170,18) url(/images/interface/new_site/white_transparent_bg.png) repeat-x top left; 
+width: 100%; 
+border: 1px solid rgb(166,106,46); 
+border-width: 1px 0px 1px 0px; 
+height: 41px;
+/*
+moz-box-shadow: 3px 3px 4px #000;
+-webkit-box-shadow: 3px 3px 4px #000;
+*/
+box-shadow: 0px 0px 1em rgba(0,0,0,.5);
+position: fixed;
+z-index: 1000;
+opacity: .95;
+}
+
+h1#logo {
+text-indent: -999em; 
+overflow: hidden; 
+float: left; 
+margin: 9px 0px 0px 10px}
+
+h1#logo a {
+display: block; 
+background: url(/images/interface/new_site/logo.png) no-repeat; 
+width: 404px; 
+height: 22px;
+}
+
+ul#nav {
+float: right; 
+margin: 0;
+padding: 0;
+height: 41px;
+}
+
+ul#nav li {
+float: right;
+margin: 0 0 0 1em;
+font: bold 1.4em "ff-tisa-web-pro-1","ff-tisa-web-pro-2", georgia, serif;
+text-transform: uppercase;
+padding: 4px 0px 4px;
+height: 34px;}
+
+ul#nav li a {
+display: block; 
+padding: 0px;
+color: #775641;
+text-decoration: none;
+text-shadow: 0px 1px 0px rgba(255,255,255,.5), 0px -1px 0px rgba(0,0,0,.5);}
+
+ul#nav li.current {
+background:#775641 url({site_url}images/interface/new_site/nav-bg-selected.png) top left repeat-x;
+}
+
+ul#nav li.current a {
+color: #ffbb6e;
+text-shadow: 1px 1px 0px rgba(0,0,0,.35);}
+
+#container > h1 {
+	font-size: 3.5em;
+	line-height: 1em;
+	text-align: center;
+	letter-spacing: -3px;
+	font-family: "TradeGothicLTStdBdCnNo.20";
+	text-shadow: 0px 1px 0px rgba(255,255,255,.35);		
+	color: #775641;
+	margin: 0;
+}
+#container > h2 {
+	font-family: "PerpetuaItalic", Georgia, serif; 
+	font-weight: normal; 
+	font-size: 3em;
+    font-weight: normal;
+    margin: 0.25em 0 0;
+    text-align: center;
+}
+#container h1 span {font-size: .75em;}
+section {
+	margin: 1.5em 0 0 0;
+}
+section h2 {
+	font-size: 2em;
+	margin: 0 0 .25em 0;
+}
+
+/* 2.Content
+---------------------------------------------------------------------- */
+
+.mainMessage {padding: 1.5em 0 0;}
+
+.board {
+	background: url(/assets/images/board-bg.jpg) repeat top left; 
+	margin: 2em 1em 0 1em; 
+	padding: 1em; 
+	border: 5px solid #754623;
+	border-width: 5px 0;
+	moz-box-shadow: 0px 0px 2px rgba(0,0,0,.5);
+	-webkit-box-shadow: 0px 0px 2px rgba(0,0,0,.5);
+	box-shadow: 0px 0px 2px rgba(0,0,0,.5);
+}
+.board ul {
+	padding: 1em;
+	background: url(/assets/images/connected-social-graph.png) no-repeat 95% 50% ;
+}
+.board ul li {/* border-bottom: 1px dotted #fff;  */margin: 0; padding: 1.25em 0 1.25em 4.5em; background: url(/assets/images/list-numbers.png) no-repeat 0 1.5em ; }
+.board ul li.emailText {background-position: 0px -100px;}
+.board ul li.mail {background-position: 0px -230px;}
+.board ul li h3, .board ul li p {margin: 0; padding: 0; color: #fff; text-shadow: 0px 1px 0px rgba(0,0,0,.75);}
+.board ul li h3 {font-size: 2em; margin: 0 0 .25em;}
+.board ul li p {font-size: 1.6em;}
+.board ul li a:link  {color: #fff;}
+.board ul li a:visited {color: #c1a28b;}
+.formContainer {border: 1px dotted #bbb8b2; border-width: 2px 0; padding-bottom: 1.5em; background: transparent url(/assets/images/rusty-bg.jpg) repeat;}
+.friends-btn {margin: 1.5em 0 0;}
+.friends-btn .col .inner {padding: 0;}
+.form .col .inner {padding: 0 .5em;}
+.mainMessage > h2 {text-align: center; font-size: 2em; margin: 0em;}
+.mainMessage > h3 {text-align: center; font-family: "PerpetuaItalic", Georgia, serif; font-weight: normal; margin: 0; font-size: 1.8em; margin: .125em 0 .5em;}
+
+.btn-en {
+
+	border: 1px solid #ab7b19; 
+	display: block; 
+	margin: 2em auto 1em auto;
+	color: #fff;
+	text-shadow: -1px -1px 0px rgba(0,0,0,.35);	
+	width: 40%;
+	text-align: left;
+	-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+	cursor: pointer;
+	font-size: 1.8em;
+	
+	background: #ffc44f url(/assets/images/friends-btn-bg.png) no-repeat 100% -4px; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffc44f 0%, #f4ad1d 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffc44f), color-stop(100%,#f4ad1d)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffc44f 0%,#f4ad1d 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffc44f 0%,#f4ad1d 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffc44f 0%,#f4ad1d 100%); /* IE10+ */
+	background: linear-gradient(top,  #ffc44f 0%,#f4ad1d 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc44f', endColorstr='#f4ad1d',GradientType=0 ); /* IE6-9 */
+	
+
+	moz-box-shadow: 0px 0px .25em rgba(0,0,0,.75), inset 0px 1px 0px rgba(255,255,255,.35);
+	-webkit-box-shadow: 0px 0px .25em rgba(0,0,0,.75), inset 0px 1px 0px rgba(255,255,255,.35);
+	box-shadow: 0px 0px .25em rgba(0,0,0,.75), inset 0px 1px 0px rgba(255,255,255,.35);
+	opacity: 1;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	   -moz-transition: opacity 0.5s ease-in-out;
+	     -o-transition: opacity 0.5s ease-in-out;
+	        transition: opacity 0.5s ease-in-out;		
+
+}
+.btn-en:hover {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f4ad1d), color-stop(100%,#ffc44f)); /* Chrome,Safari4+ */
+	opacity: .85;
+}
+.btn-en span {	
+	background: transparent url(/assets/images/friends-btn-bg.png) no-repeat 100% -2px; 
+	display: block; 
+	padding: 1em 1em 1em 2em;	
+}
+
+
+.form {border-top: 2px dotted #bbb8b2; padding: 1em 0 0; background-color: rgba(0,0,0,.155);}
+.form ul {}
+.form ul li {width: 49%; float: left; margin: 0.5em .25em 0 .25em;}
+.form ul li span {font-style: italic; font-family: serif; font-weight: normal;}
+.form ul li.fullWidth {float: none; width: 50%; clear: left; padding: 1em 0; margin: 0 auto;}
+.form ul li.fullWidth .relation {border: 4px double #999; padding: .5em; background-color: rgba(255,255,255,.5)}
+.ie .form ul li.fullWidth .relation {background-color: #fff;}
+.form ul li.fullWidth div p {float: left; width: auto;}
+.form ul li p label.choice {margin: 0 3em 0 0;}
+.form ul li p {font-family: "NobileRegular"; font-size: .866em; font-weight: bold;}
+.form ul li input[type="text"] {line-height: 22px; height: 28px; width: 96%; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; border: 1px solid #a6a29b; padding: .5em; font-family: "NobileRegular"; -webkit-box-shadow: 0px 1px 0px rgba(255,255,255,.5); moz-box-shadow: 0px 1px 0px rgba(255,255,255,.5); box-shadow: 0px 1px 0px rgba(255,255,255,.5);}
+.form ul li.captcha p.captcha-img {}
+.form ul li.captcha p.captcha-img img {margin: 0 1em 0 0; line-height: 30px; text-align: center; display: inline;}
+.form ul li.captcha input[type="text"] {}
+.form ul li p label {padding: 0 0 0 .25em;}
+.form {display: none;}
+
+.form input[type="text"]:focus, .contactForm textarea:focus {
+border: 1px solid #0569b1;
+-webkit-box-shadow: 0px 1px 0px rgba(255,255,255,.5);
+moz-box-shadow: 0px 1px 0px rgba(156,100,43,1);
+box-shadow: 0px 0px 1em rgba(85,184,255,1);;
+}
+
+.aboutMe p {font-size: 1.2em; line-height: 22px;}
+.aboutMe h2 {text-align: center; font-size: 1.6em;}
+.aboutMe h3 {text-align: center; font-family: "PerpetuaItalic", Georgia, serif; font-weight: normal; margin: 0; font-size: 1.8em; margin: .125em 0 1em;}
+.aboutMe h4 {font-size: 1.2em; margin: 0;}
+.aboutMe .col img {border-bottom: 8px solid #775641;}
+
+input[type="submit"] {
+width: 100%;
+font-size: 1.2em;
+font-weight: bold;
+margin: 0; 
+border: 2px solid #815222; 
+color:#fff; 
+cursor:pointer; 
+text-shadow: 0px -1px 0px rgba(0,0,0,.5); 
+padding:.75em;
+-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+margin: .5em 0;
+-webkit-box-shadow: 0px 1px 0px rgba(255,255,255,.5);
+moz-box-shadow: 0px 1px 0px rgba(255,255,255,.5);
+box-shadow: 0px 1px 0px rgba(255,255,255,.5) inset, 0px 1px .25em rgba(0,0,0,.5);
+
+background: #c57d34; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M1N2QzNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ5JSIgc3RvcC1jb2xvcj0iI2E0NmEzMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzlmNjUyYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5ZjY1MmMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #c57d34 0%, #a46a32 49%, #9f652c 50%, #9f652c 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c57d34), color-stop(49%,#a46a32), color-stop(50%,#9f652c), color-stop(100%,#9f652c)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #c57d34 0%,#a46a32 49%,#9f652c 50%,#9f652c 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #c57d34 0%,#a46a32 49%,#9f652c 50%,#9f652c 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #c57d34 0%,#a46a32 49%,#9f652c 50%,#9f652c 100%); /* IE10+ */
+background: linear-gradient(top,  #c57d34 0%,#a46a32 49%,#9f652c 50%,#9f652c 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c57d34', endColorstr='#9f652c',GradientType=0 ); /* IE6-8 */
+
+}
+
+
+
+/* !3.FOOTER
+---------------------------------------------------------------------- */
+footer {border-top: 1px solid #999; height: 50px; background: transparent url(/assets/images/footer-bg.gif) repeat; width: 100%; height: 60px; padding: .75em 0 .5em;}
+footer p {font-size: 1em; color: #fff; text-shadow: 0px 1px 0px rgba(0,0,0,.5); letter-spacing: -1px; font-family: "NobileRegular", "Helvetica Neue", Helvetica, sans-serif;}
+footer p strong {float: right;}
+
+
+
+/* -----------------------------------------------------------------
+	Thank you page 
+-----------------------------------------------------------------*/
+#thank-you-page section {border: 1px solid #999; padding: 1em;}
+#thank-you-page section h2 {text-align: center; margin: 0 -.5em .5em; border-bottom: 1px solid #999; padding: 0 0 .5em;}
+#thank-you-page .signature {margin: 6em auto 0; font-family: "NobileRegular", sans-serif; font-size: 1em; font-weight: bold; text-align: center; border-top: 1px solid #999; width: 50%; position: relative;}
+#thank-you-page .signature img {position: absolute; top: -130px; left: 40%;}
+
+
+/* -----------------------------------------------------------------
+	Client Worksheet page
+-----------------------------------------------------------------*/
+
+
+
+/* -----------------------------------------------------------------
+	Media Queries for Mobile and Tablet  
+-----------------------------------------------------------------*/
+
+
+@media screen and (max-width: 768px), screen and (min-width: 1200px) {
+
+}
+
+
+/* 10-inches table, ipad (portrait) ----------- */
+
+@media screen and (max-width: 768px) {
+	#container, nav > section, footer > section, #topNavInner {	
+		width: auto;
+	}
+	h1#logo a {width: 165px;}
+	ul#nav {padding: 0 1em 0 0;}
+	ul#nav li {font-size: 1.2em; padding-top: 7px;}
+	#container {padding-right: .75em; padding-left: .75em;}
+	#container > h1 {letter-spacing: -1px}
+	.grid5 .col:first-child {border-top: 1px dotted #999!important;}
+	.grid5 .col {float: none; width: 100%; border-bottom: 1px dotted #999; border-width: 1px 0; padding: .5em 0;}
+	.grid5 .col .inner 	{padding: 1em 0 0;}
+	.grid5 .avatar {width: 15%; float: left; margin: 0 1em 0 0;}
+	.btn-en {width: 50%;}
+}
+/* Kindle and Nook mode (portrait and landscape) ----------- */
+
+@media screen and (max-width: 600px) { 
+	html {/* Disable iOS/WinMobile font size changes */
+		-ms-text-size-adjust: none;
+		-webkit-text-size-adjust: none;
+	}
+	#container > h1 {font-size: 3em;}
+	.grid5 .avatar {width: 30%;}
+	.btn-en {width: 95%;}
+	.board ul {background: none;}
+	footer {}
+	footer section {padding: 0 1em;}
+}
+
+
+/* Few android phones (landscape) ----------- */
+
+@media screen and (max-width: 520px) {
+	ul#nav {display: none;}	
+	.dropDownNav {display: block; position: absolute; top: 0; right: 0; padding: .5em 1em 0 0; z-index: 1000;}
+	#container > h1 {font-size: 2em;}	
+	.board ul li {padding-top: .75em; padding-bottom: .75em;}
+	.board ul li h3 {font-size: 1.4em;}
+	.board ul li p {font-size: 1.4em;}
+	
+	.form ul li.fullWidth {width: 98%;}
+	.form ul li {width: 100%;}
+	input[type="submit"] {width:99%;}
+	.mainMessage > h2 {font-size: 1.6em;}
+	.mainMessage > h3 {font-size: 1.6em;}
+	footer p strong {float: none; display: block;}
+	
+
+}
+
+/* iPhones (landscape) ----------- */
+
+@media screen and (max-width: 480px) {
+
+
+}
+
+/* iPhones (portrait) ----------- */
+
+@media screen and (max-width: 320px) {
+		body p {font-size: 1.2em; line-height: 22px;}
+		h1#logo {float: none; }
+		h1#logo a {margin: 0 auto;}
+		.dropDownNav {float: none; position: static; margin: -30px 0em 1.5em 0em; padding: .5em 0 .5em 0; background-color: #bcbcbc; border: 1px solid #999; border-width: 0px 1px 1px 1px;}
+		.dropDownNav select#navMenu {margin: 0 0 0 5.5em;}
+		#container > h1 {font-size: 1.6em;}
+		.board {margin: 0;}
+		.board ul {padding: 0;}	
+		.btn-en	{font-size: 1.4em; text-align: left;}
+		.btn-en span {background-position: 100% -5px; padding-left: 1em;}
+		footer p {font-size: 1em;}
+}
+
+/* -----------------------------------------------------------------
+	Desktop version  
+-----------------------------------------------------------------*/
+
+/* Desktop version above 768 */
+@media screen and (min-width: 768px) {
+	h1#logo a {width: 165px;}
+	ul#nav {padding: 0 1em 0 0;}	
+}
+
+/* Desktop version above 1024 */
+@media screen and (min-width: 1025px) {
+	h1#logo a {width: 404px;}
+}
+/* Desktop version above 1024 */
+@media screen and (min-width: 1200px) {
+
+}
+

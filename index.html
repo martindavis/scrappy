@@ -7,6 +7,7 @@
     <meta name="description" content="Scrappy : Vizhuds!" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/master.css">    
 
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
     <!--[if lte IE 8]>
@@ -19,25 +20,36 @@
   <body>
 
     <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/martindavis/scrappy">View on GitHub</a>
-
-          <h1 id="project_title">Scrappy</h1>
-          <h2 id="project_tagline">Vizhuds!</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/martindavis/scrappy/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/martindavis/scrappy/tarball/master">Download this project as a tar.gz file</a>
-            </section>
+    <div class="header-wrapper">
+        <header class="row twelve">
+          <a href="" class="logo">          
+            <img src="assets/images/logo.png" />
+          </a>
         </header>
     </div>
 
     <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <div id="map" style="width: 800px; height: 600px"></div>
+    <div class="row twelve main-content">
 
+    <section class="left-col columns four">
+
+      <div class="">
+          <ul>
+              <li><a href="#">Downtown</a></li>
+              <li><a href="#">Uptown</a></li>
+              <li><a href="#">Downtown</a></li>
+              <li><a href="#">Downtown</a></li>
+              <li><a href="#">Downtown</a></li>
+          </ul>
+      </div>
+
+    </section>
+
+    <section class="right-col columns eight">
+      
+    <h3>You're at Scrappy Neighborhood</h3>
+        
+        <div id="map" style="width: 800px; height: 600px"></div>
         <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
         <script src="Control.Attribution-OSMEdit.js"></script>
         <script>
@@ -56,9 +68,9 @@
             });
                
         </script>
-
-      </section>
-    </div>
+    </section>
+    
+    </div>  <!-- end main content --> 
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">

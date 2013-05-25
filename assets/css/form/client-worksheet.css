@@ -1,0 +1,340 @@
+/*
+
+	Your Company Name
+	Designed Juliano Moreira { http://www.julianomoreira.com }
+	Version 1.0
+	
+	STYLESHEET FOR SUPER ANCIENT BROWSERS
+	
+	- Defines styles for browsers that don't support @import
+	- Only body & links need styling
+	- Markup should be nice so site should still be usable
+	
+*/
+
+/* General elements (Links, Lines, h1, h2, h3, h4, h5 etc)
+---------------------------------------------------------------------- */
+
+img, embed, object, video {max-width: 100%;}
+a:link {
+color: #626262;
+}
+a:visited {
+color: #424242;
+}
+a:hover {
+text-decoration: none;
+}
+.doubleLine {height: 9px; /* background: url(../images/double-line.png) repeat-x top left; */ margin: 2.5em 0; border-top: 4px double #999;}
+p {color: #5e5e5e; text-shadow: 0px 1px 0px rgba(255,255,255,.5); margin: 0 0 .5em;}
+h1, h2, h3, h4, h5, h6 {margin: 0 0 .5em; font-family: "TradeGothicLTStdBdCnNo.20"; color: #626262;}
+h1 {font-size: 2em;}
+h2 {font-size: 1.8em;}
+h3 {font-size: 1.6em;}
+h4 {font-size: 1.4em;}
+h5 {font-size: 1.2em;}
+h6 {font-size: 1em;}
+
+html, body {height: 100%;}
+.pushMe {clear: both; height: 50px;}
+
+.error {color: red; display: block;}
+
+/* Form elements */
+
+input[type="text"] {line-height: 22px; height: 28px; width: 99%; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; border: 1px solid #a6a29b; padding: .5em; font-family: "NobileRegular"; -webkit-box-shadow: 0px 1px 0px rgba(255,255,255,.5); moz-box-shadow: 0px 1px 0px rgba(255,255,255,.5); box-shadow: 0px 1px 0px rgba(255,255,255,.5);}
+
+input[type="text"]:focus, textarea:focus {
+border: 1px solid #0569b1;
+-webkit-box-shadow: 0px 1px 0px rgba(247,189,22,1);
+moz-box-shadow: 0px 1px 0px rgba(247,189,22,1);
+box-shadow: 0px 0px 1.5em rgba(247,189,22,1);
+}
+
+input[type="submit"] {
+width: 100%;
+font-size: 1.2em;
+font-weight: bold;
+margin: 0; 
+border: 2px solid #815222; 
+color:#fff; 
+cursor:pointer; 
+text-shadow: 0px -1px 0px rgba(0,0,0,.5); 
+padding:.75em;
+-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+margin: .5em 0;
+-webkit-box-shadow: 0px 1px 0px rgba(255,255,255,.5);
+moz-box-shadow: 0px 1px 0px rgba(255,255,255,.5);
+box-shadow: 0px 1px 0px rgba(255,255,255,.5) inset, 0px 1px .25em rgba(0,0,0,.5);
+
+background: #c57d34; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M1N2QzNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ5JSIgc3RvcC1jb2xvcj0iI2E0NmEzMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzlmNjUyYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5ZjY1MmMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #c57d34 0%, #a46a32 49%, #9f652c 50%, #9f652c 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c57d34), color-stop(49%,#a46a32), color-stop(50%,#9f652c), color-stop(100%,#9f652c)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #c57d34 0%,#a46a32 49%,#9f652c 50%,#9f652c 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #c57d34 0%,#a46a32 49%,#9f652c 50%,#9f652c 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #c57d34 0%,#a46a32 49%,#9f652c 50%,#9f652c 100%); /* IE10+ */
+background: linear-gradient(top,  #c57d34 0%,#a46a32 49%,#9f652c 50%,#9f652c 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c57d34', endColorstr='#9f652c',GradientType=0 ); /* IE6-8 */
+
+}
+
+/* -----------------------------------------------------------------
+	1.Layout Structure
+-----------------------------------------------------------------*/
+
+/* Grid structure */
+
+.grid1 .col {width: 100%;}
+.grid2 .col {width: 50%; float: left;}
+.grid3 .col {width: 33.298%/*323/970*/; float: left;}
+.grid4 .col {width: 24.948%/*242/970*/; float: left;}
+.grid5 .col {width: 20%/*194/970*/; float: left;}
+.col .inner {padding: 0 1em 0 0;}
+
+header {width: auto;}
+#container, nav > section, footer > section, #topNavInner {
+	max-width: 69.28em; /* 970 / 14 = 69.28 */
+	position: relative;
+	margin: 0 auto;	
+}
+#container {padding: 4em 0 1em 0; min-height: 100%; margin-bottom: -50px;}
+.dropDownNav {display: none;}
+
+/* 1.BODY
+---------------------------------------------------------------------- */
+
+body {
+	background: url(/assets/images/rusty-bg.jpg) repeat top left; 
+	font-family: "NobileRegular", "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 87.5%; /* 87.5% = 14px | 100% equals roughly 16px so do the math */
+	line-height: 1.8em;
+}
+
+/* !TopNav and Navigation ---------- */
+
+#topNav {
+background: rgb(245,170,18) url(/images/interface/new_site/white_transparent_bg.png) repeat-x top left; 
+width: 100%; 
+border: 1px solid rgb(166,106,46); 
+border-width: 1px 0px 1px 0px; 
+height: 41px;
+/*
+moz-box-shadow: 3px 3px 4px #000;
+-webkit-box-shadow: 3px 3px 4px #000;
+*/
+box-shadow: 0px 0px 1em rgba(0,0,0,.5);
+position: fixed;
+z-index: 1000;
+opacity: .95;
+}
+
+h1#logo {
+text-indent: -999em; 
+overflow: hidden; 
+float: left; 
+margin: 9px 0px 0px 10px}
+
+h1#logo a {
+display: block; 
+background: url(/images/interface/new_site/logo.png) no-repeat; 
+width: 404px; 
+height: 22px;
+}
+
+ul#nav {
+float: right; 
+margin: 0;
+padding: 0;
+height: 41px;
+}
+
+ul#nav li {
+float: right;
+margin: 0 0 0 1em;
+font: bold 1.4em "ff-tisa-web-pro-1","ff-tisa-web-pro-2", georgia, serif;
+text-transform: uppercase;
+padding: 4px 0px 4px;
+height: 34px;}
+
+ul#nav li a {
+display: block; 
+padding: 0px;
+color: #775641;
+text-decoration: none;
+text-shadow: 0px 1px 0px rgba(255,255,255,.5), 0px -1px 0px rgba(0,0,0,.5);}
+
+ul#nav li.current {
+background:#775641 url({site_url}images/interface/new_site/nav-bg-selected.png) top left repeat-x;
+}
+
+ul#nav li.current a {
+color: #ffbb6e;
+text-shadow: 1px 1px 0px rgba(0,0,0,.35);}
+
+
+
+/* 2.Content
+---------------------------------------------------------------------- */
+
+#container > h1 {
+	font-size: 4.5em;
+	line-height: .9em;
+	text-align: center;
+	letter-spacing: -3px;
+	font-family: "PerpetuaItalic", Georgia, serif; 
+	text-shadow: 0px 1px 0px rgba(255,255,255,.35);		
+	color: #775641;
+	margin: 0;
+}
+#container > h2 {
+	font-family: "PerpetuaItalic", Georgia, serif; 
+	font-weight: normal; 
+	font-size: 3em;
+    font-weight: normal;
+    margin: 0.25em 0 0;
+    text-align: center;
+}
+#container h1 span {font-size: .75em;}
+section {
+	margin: 1em 0 1em 0;
+}
+.qScrollTos { border: 1px solid #999; border-width: 1px 0; padding: 1em 0; margin: 1em 0;}
+.qScrollTos li {float: left; width: 24.75%; border: 1px solid #999; border-width: 1px 1px 1px 0; text-align: center; background: #cecece; padding: .5em 0; color: #666; text-shadow: 0px 1px 0px rgba(255,255,255,.5); cursor: pointer; font-weight: bold;
+-webkit-transition: background-color 0.5s ease-in-out; 
+-moz-transition: background-color 0.5s ease-in-out; 
+-o-transition: background-color 0.5s ease-in-out; 
+transition: background-color 0.5s ease-in-out;
+font-size: .8666em;
+}
+.qScrollTos li:hover {background-color: #efefef;}
+.qScrollTos li:first-child {border-left: 1px solid #999;}
+textarea.answer-box {width: 100%; font-size: 1em; line-height: 18px; color: #333; font-family: "NobileRegular", "Helvetica Neue", Helvetica, sans-serif;}
+.question h3 {margin: 0;}
+.question p {margin: .5em 2em .5em 0; font-size: 1em;}
+
+.client-info  {}
+.client-info li {width: 50%; float: left; margin: .5em 0 0;}
+.client-info li p {padding: 0 .5em; margin: 0;}
+.client-info li p span {font-family: serif; font-weight: normal; font-style: italic;}
+.captcha {padding: 2em 0 0;}
+.captcha input[type="submit"] {margin: 1em 0;}
+
+.question {position: relative; margin: 1em 0; padding: .5em 0}
+a.back {position: absolute; top: 10px; right: 1%; width: 103px; height: 29px; background: url(/assets/images/back-to-top.png) no-repeat top left; text-indent: -999em; overflow: hidden;}
+a.back:hover {background-position: bottom left;}
+
+/* !3.FOOTER
+---------------------------------------------------------------------- */
+footer {border-top: 1px solid #999; height: 50px; background: transparent url(/assets/images/footer-bg.gif) repeat; width: 100%; height: 60px; padding: .75em 0 .5em;}
+footer p {font-size: 1em; color: #fff; text-shadow: 0px 1px 0px rgba(0,0,0,.5); letter-spacing: -1px; font-family: "NobileRegular", "Helvetica Neue", Helvetica, sans-serif;}
+footer p strong {float: right;}
+
+
+
+/* -----------------------------------------------------------------
+	Media Queries for Mobile and Tablet  
+-----------------------------------------------------------------*/
+
+
+@media screen and (max-width: 768px), screen and (min-width: 1200px) {
+
+}
+
+
+/* 10-inches table, ipad (portrait) ----------- */
+
+@media screen and (max-width: 768px) {
+	#container, nav > section, footer > section, #topNavInner {	
+		width: auto;
+	}
+	h1#logo a {width: 165px;}
+	ul#nav {padding: 0 1em 0 0;}
+	ul#nav li {font-size: 1.2em; padding-top: 7px;}
+	#container {padding-right: .75em; padding-left: .75em;}
+	#container > h1 {letter-spacing: -1px}
+	.grid5 .col:first-child {border-top: 1px dotted #999!important;}
+	.grid5 .col {float: none; width: 100%; border-bottom: 1px dotted #999; border-width: 1px 0; padding: .5em 0;}
+	.grid5 .col .inner 	{padding: 1em 0 0;}
+	.grid5 .avatar {width: 15%; float: left; margin: 0 1em 0 0;}
+	.btn-en {width: 50%;}
+}
+/* Kindle and Nook mode (portrait and landscape) ----------- */
+
+@media screen and (max-width: 600px) { 
+	html {/* Disable iOS/WinMobile font size changes */
+		-ms-text-size-adjust: none;
+		-webkit-text-size-adjust: none;
+	}
+	#container > h1 {font-size: 3em;}
+	.grid5 .avatar {width: 30%;}
+	.btn-en {width: 95%;}
+	.board ul {background: none;}
+	footer {}
+	footer section {padding: 0 1em;}
+}
+
+
+/* Few android phones (landscape) ----------- */
+
+@media screen and (max-width: 520px) {
+	ul#nav {display: none;}	
+	.dropDownNav {display: block; position: absolute; top: 0; right: 0; padding: .5em 1em 0 0; z-index: 1000;}
+	#container > h1 {font-size: 2em;}	
+	.board ul li {padding-top: .75em; padding-bottom: .75em;}
+	.board ul li h3 {font-size: 1.4em;}
+	.board ul li p {font-size: 1.4em;}
+	
+	.form ul li.fullWidth {width: 98%;}
+	.form ul li {width: 100%;}
+	input[type="submit"] {width:99%;}
+	.mainMessage > h2 {font-size: 1.6em;}
+	.mainMessage > h3 {font-size: 1.6em;}
+	footer p strong {float: none; display: block;}
+	
+
+}
+
+/* iPhones (landscape) ----------- */
+
+@media screen and (max-width: 480px) {
+
+
+}
+
+/* iPhones (portrait) ----------- */
+
+@media screen and (max-width: 320px) {
+		body p {font-size: 1.2em; line-height: 22px;}
+		h1#logo {float: none; }
+		h1#logo a {margin: 0 auto;}
+		.dropDownNav {float: none; position: static; margin: -30px 0em 1.5em 0em; padding: .5em 0 .5em 0; background-color: #bcbcbc; border: 1px solid #999; border-width: 0px 1px 1px 1px;}
+		.dropDownNav select#navMenu {margin: 0 0 0 5.5em;}
+		#container > h1 {font-size: 1.6em;}
+		.board {margin: 0;}
+		.board ul {padding: 0;}	
+		.btn-en	{font-size: 1.4em; text-align: left;}
+		.btn-en span {background-position: 100% -5px; padding-left: 1em;}
+		footer p {font-size: 1em;}
+}
+
+/* -----------------------------------------------------------------
+	Desktop version  
+-----------------------------------------------------------------*/
+
+/* Desktop version above 768 */
+@media screen and (min-width: 768px) {
+	h1#logo a {width: 165px;}
+	ul#nav {padding: 0 1em 0 0;}	
+}
+
+/* Desktop version above 1024 */
+@media screen and (min-width: 1025px) {
+	h1#logo a {width: 404px;}
+}
+/* Desktop version above 1024 */
+@media screen and (min-width: 1200px) {
+
+}
+

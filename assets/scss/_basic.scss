@@ -1,0 +1,129 @@
+/**
+ * Basic Styles
+ *
+ * This stylesheet is comprised of media query-agnostic styles such as link color,
+ * color, background images, etc. used in this site.
+ *
+ * @tag This is a tag named 'tag'
+ *
+ * @todo This is a todo statement that describes an atomic task to be completed
+ *   at a later date. It wraps after 80 characters and following lines are
+ *   indented by 2 spaces.
+ */
+ 
+
+/* ==========================================================================
+   Basic styles
+   ========================================================================== */   
+
+/* Links ---------------------- */
+
+a img { border: none; }
+
+a:link {
+	font-weight: bold;
+	color: #bf4d28;
+	color: rgba(191,77,40,1);
+	text-decoration: underline;
+}
+a:visited {
+	font-weight: normal;
+	color: rgba(191,77,40,.5);
+}
+a:hover {
+	color: rgba(191,77,40,.75);
+	text-decoration: none;	
+}
+a:focus { color: #2795b6; }	
+
+p {font-size: em(18);}
+
+p.read-more {
+	margin: 0 0 0;
+	border: 1px solid rgba(0,0,0,.25);		
+	color: #fff; 
+	padding: .5em .75em; 
+	text-shadow: 0px 1px 1px rgba(0,0,0,.5); 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	moz-box-shadow: inset 0px 1px 1px (255,255,255,.5);
+	-webkit-box-shadow: inset 0px 1px 1px (255,255,255,.5);
+	box-shadow: inset 0px 1px 1px (255,255,255,.75);
+	display: inline-block;		
+
+	background: #c9b59d; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M5YjU5ZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNhYTk2N2UiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #c9b59d 0%, #aa967e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c9b59d), color-stop(100%,#aa967e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #c9b59d 0%,#aa967e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #c9b59d 0%,#aa967e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #c9b59d 0%,#aa967e 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #c9b59d 0%,#aa967e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9b59d', endColorstr='#aa967e',GradientType=0 ); /* IE6-8 */	
+	@include transition-all;	
+	a:link, a:visited {
+		color: #fff;		
+		text-decoration: none;
+	}
+}
+
+p.read-more:hover {
+	background: #aa967e; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2FhOTY3ZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjOWI1OWQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #aa967e 0%, #c9b59d 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#aa967e), color-stop(100%,#c9b59d)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #aa967e 0%,#c9b59d 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #aa967e 0%,#c9b59d 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #aa967e 0%,#c9b59d 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #aa967e 0%,#c9b59d 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aa967e', endColorstr='#c9b59d',GradientType=0 ); /* IE6-8 */
+}	
+
+html {}
+	
+body {
+	background: white; 
+	font-family: normal $proxima; 
+	font-weight: normal; 
+	font-style: normal; 
+	font-size: 100%; 
+	line-height: 1; 
+	color: #222222; 
+	position: relative; 
+	-webkit-font-smoothing: antialiased; 
+	background: transparent url(../images/body-bg.jpg) repeat top left;
+}
+
+/* ==========================================================================
+   Home Page
+   ========================================================================== */
+
+.row {	
+	
+}
+.header-wrapper {
+	border-top: 6px solid #556f9f;
+	padding: 1em 0;
+	border-bottom: 1px solid black(.1);
+}
+.logo {
+	width: 157px;
+	margin: 0 auto;	
+	display: block;
+}
+.main-content {
+	#map {
+		width: 100%!important;		
+	}
+	background-color: #fff;
+}
+.left-col {
+	
+}
+.right-col {
+	
+}
+
