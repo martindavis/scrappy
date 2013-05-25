@@ -19,37 +19,6 @@
    Media Queries 
    ========================================================================== */
 
-@mixin max-600 {
-	@media screen and (max-width : 600px) {
-		@content;
-	}
-}
-@mixin min-600 {
-	@media screen and (min-width : 600px) {
-		@content;
-	}
-}
-@mixin max-768 {
-	@media screen and (max-width : 768px) {
-		@content;
-	}
-}
-@mixin min-768 {
-	@media screen and (min-width : 768px) {
-		@content;
-	}
-}
-@mixin max-768 {
-	@media screen and (max-width : 768px) {
-		@content;
-	}
-}
-@mixin min-940 {
-	@media screen and (min-width : 940px) {
-		@content;
-	}
-}
-
 /* ==========================================================================
    Import base, form, typography and functions scss 
    ========================================================================== */
@@ -59,16 +28,16 @@
 @import "form";
 @import "font-icons";
 @import "functions";
-@import "animations";
+@import "grid";
 
 /* ==========================================================================
    Style in General
    ========================================================================== */
 
 @import "basic";   
-@import "max-600";
-@import "min-600";
-@import "max-768";
-@import "min-768";
-@import "min-940";
+// @import "max-600";
+// @import "min-600";
+// @import "max-768";
+// @import "min-768";
+// @import "min-940";
 

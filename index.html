@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="Scrappy : Vizhuds!" />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css"> -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/master.css">    
 
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
@@ -25,13 +25,19 @@
           <a href="" class="logo">          
             <img src="assets/images/logo.png" />
           </a>
+          <h3>You're in Scrappy Neighborhood</h3>          
         </header>
     </div>
 
     <!-- MAIN CONTENT -->
     <div class="row twelve main-content">
 
+      <h4 class="title">Pick your neighborhood in Minneapolis!</h4>
+
     <section class="left-col columns four">
+      
+          <ul class="nav">
+              <li><a href="#">Downtown <span class="icon-left-open"></span></a></li>
 
       <div id="neigborhoodList" class="">
           <ul>
@@ -40,14 +46,12 @@
               <li><a href="#">Downtown</a></li>
               <li><a href="#">Downtown</a></li>
               <li><a href="#">Downtown</a></li>
-          </ul>
-      </div>
+          </ul>      
 
     </section>
 
     <section class="right-col columns eight">
-      
-    <h3>You're at Scrappy Neighborhood</h3>
+          
         
         <div id="map" style="width: 800px; height: 600px"></div>
         <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
@@ -141,10 +145,17 @@
     </div>  <!-- end main content --> 
 
     <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
+    <div class="footer-wrapper" class="outer">
+      <footer class="row twelve ">
+        
+        
+        <p>These data are public information and may be reproduced for free with appropriate citation. Users of this data should cite it as "Minnesota Compass, Minneapolis-St. Paul Neighborhood Profiles" and include this <a href="www.mncompass.org/twincities/neighborhoods.php">address</a> . </p>
+
+        <p>Site created by <strong>Martin Davis, Matt Decuir, Coby Preus, Juliano Moreira</strong></p>
+
         <p class="copyright">Scrappy maintained by <a href="https://github.com/martindavis">martindavis</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+        
+        
       </footer>
     </div>
 
