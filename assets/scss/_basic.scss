@@ -95,6 +95,12 @@ body {
 	position: relative; 
 	-webkit-font-smoothing: antialiased; 
 	background: transparent url(../images/body-bg.jpg) repeat top left;
+	a:link {
+		color: #4e6692;		
+	}
+	a:visited {
+		colo: #6989c4;
+	}
 }
 
 /* ==========================================================================
