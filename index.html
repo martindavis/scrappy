@@ -12,7 +12,7 @@
     <!--[if lte IE 8]>
        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.ie.css" />
     <![endif]-->
-
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <title>Scrappy</title>
   </head>
 
@@ -46,6 +46,15 @@
             zoom: 11,
             layers: new L.TileLayer('http://a.tiles.mapbox.com/v3/unsay.map-yh392617/{z}/{x}/{y}.png')
            });
+           $(document).ready(function() {
+             $.get("data/minneapolis.json", function(data) {
+                //When GeoJSON is loaded
+                var geojsonLayer = new L.GeoJSON(data);   //New GeoJSON layer
+                  map.addLayer(geojsonLayer);     //Add layer to map  
+
+              });
+            });
+               
         </script>
 
       </section>
