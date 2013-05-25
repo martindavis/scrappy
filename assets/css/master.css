@@ -307,8 +307,8 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
    ========================================================================== */
 @font-face {
   font-family: 'zocial';
-  src: url("/assets/font-icons/zocial/zocial.eot?72406524");
-  src: url("/assets/font-icons/zocial/zocial.eot?72406524#iefix") format("embedded-opentype"), url("/assets/font-icons/zocial/zocial.woff?72406524") format("woff"), url("/assets/font-icons/zocial/zocial.ttf?72406524") format("truetype"), url("/assets/font-icons/zocial/zocial.svg?72406524#zocial") format("svg");
+  src: url("../font-icons/zocial/zocial.eot?72406524");
+  src: url("../font-icons/zocial/zocial.eot?72406524#iefix") format("embedded-opentype"), url("../font-icons/zocial/zocial.woff?72406524") format("woff"), url("../font-icons/zocial/zocial.ttf?72406524") format("truetype"), url("../font-icons/zocial/zocial.svg?72406524#zocial") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -1887,6 +1887,10 @@ body {
   position: relative;
   -webkit-font-smoothing: antialiased;
   background: transparent url(../images/body-bg.jpg) repeat top left; }
+  body a:link {
+    color: #4e6692; }
+  body a:visited {
+    colo: #6989c4; }
 
 /* ==========================================================================
    Home Page
@@ -1952,4 +1956,5 @@ ul.nav {
 .footer-wrapper {
   padding: 1em 0; }
   .footer-wrapper p {
-    text-align: center; }
+    text-align: center;
+    font-size: 0.875em; }
