@@ -1921,7 +1921,7 @@ ul.nav {
   padding: 1em 0 0 0; }
   ul.nav li {
     line-height: 20px;
-    padding: 1em 0.5em;
+    padding: 0.5em 0.5em;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-width: 1px 1px 0 1px;
     background: #eeeeee;
@@ -1948,3 +1948,8 @@ ul.nav {
 
 .right-col {
   padding: 1em 0 0 0; }
+
+.footer-wrapper {
+  padding: 1em 0; }
+  .footer-wrapper p {
+    text-align: center; }

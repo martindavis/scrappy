@@ -142,7 +142,7 @@ ul.nav {
 	padding: 1em 0 0 0;
 	li {
 		line-height: 20px;
-		padding: 1em .5em;
+		padding: .5em .5em;
 		border: 1px solid black(.15);
 		border-width: 1px 1px 0 1px;
 
@@ -168,5 +168,11 @@ ul.nav {
 }
 .right-col {
 	padding: 1em 0 0 0;
+}
+.footer-wrapper {
+	padding: 1em 0;	
+	p {
+		text-align: center;
+	}
 }
 
